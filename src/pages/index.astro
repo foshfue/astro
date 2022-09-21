@@ -1,17 +1,22 @@
 ---
-import Compatibility from "~/components/compatibility.astro";
+
 import Features from "~/components/features.astro";
 import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
-import Intro from "~/components/intro.astro";
-import Showcase from "~/components/showcase.astro";
+
 import Splash from "~/components/splash.astro";
+import Ant from "~/components/ant.astro";
+import Hard from "~/components/its-hard.astro";
+import Together from "~/components/together.astro";
+import Accelerator from "~/components/accelerator.astro";
+import Success from "~/components/success.astro";
+import Form from "~/components/form.astro";
 import "~/styles/index.css";
 
 const { site } = Astro;
 const image = new URL("social.jpg", site);
 const description =
-  "Build fast websites, faster. Astro is a new kind of site builder for the modern web. Lightning-fast performance meets powerful developer experience.";
+  "We are the number one OnlyFans Management and Marketing Agency. Grow Your OnlyFans to 6 figures today! Apply today and learn how much money can you make on Onlyfans.";
 ---
 
 <html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
@@ -21,7 +26,7 @@ const description =
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
-    <title>Astro Landing Page</title>
+    <title>Grow Your OnlyFans - Best OnlyFans Management Agency</title>
     <meta name="description" content={description} />
 
     <!-- fonts -->
@@ -45,7 +50,7 @@ const description =
     </noscript>
 
     <!-- social media -->
-    <meta property="og:title" content="Astro" />
+    <meta property="og:title" content="Grow Your OnlyFans" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
@@ -77,16 +82,23 @@ const description =
     </script>
   </head>
   <body
-    class="h-full overflow-x-hidden text-base bg-default text-default selection:bg-secondary selection:text-white"
+    class="h-full overflow-x-hidden text-base bg-default text-default
+     selection:bg-secondary selection:text-white"
   >
     <Header />
     <Splash />
-    <div class="px-8 py-32 space-y-24">
-      <Intro />
+    <div class="pt-32">
       <Features />
+      <Ant />
+      <Hard />
+      <Together />
+      <Accelerator />
+      <Success />
+      <Form />
+      <!-- <Intro />
       <Compatibility />
-      <Showcase />
+      <Showcase /> -->
     </div>
-    <Footer />
+    <!-- <Footer /> -->
   </body>
 </html>

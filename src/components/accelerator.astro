@@ -1,0 +1,119 @@
+---
+import ContentSection from "~/components/content-section.astro";
+import { Icon } from "astro-icon";
+
+import BlackNoise from "./../assets/BlackNoiseF.gif"
+
+
+const features = [
+  {
+    title: "40+",
+    description:
+      "Active Models",
+
+  },
+  {
+    title: "32",
+    description:
+      "6-7 Figure Models",
+
+  },
+  {
+    title: "31",
+    description:
+      "9-6 Jobs Quit",
+
+  },
+];
+---    
+
+
+<section class="flex flex-col items-center gap-4 space-y-8 scroll-mt-24 relative" id="accelerator">
+  <div
+class="absolute inset-0 w-screen -z-10 "
+style={{
+  backgroundImage: `url(${BlackNoise.src})`,
+  backgroundSize: "100px 100px",
+  backgroundRepeat: "repeat",
+
+}}></div>
+
+<div class="max-w-7xl px-6 md:pt-8 md:py-20 flex flex-col gap-y-8 ">
+
+
+  <div class="flex flex-col md:flex-row gap-y-5 gap-x-10 text-white">
+    <h3 class="
+   text-6xl md:text-7xl
+         text-white font-black w-fit">
+
+
+      <span>How Model</span>
+      <br />
+      <span>Accelerator</span>
+      <br />
+      <span>Program Works?</span>
+      <span></span>
+
+    </h3>
+    <div class="w-full text-theme-white text-justify">
+
+
+      <p class="">
+
+
+        Every successful growth partnership we’ve had has been built on a solid foundation – a relationship
+        built on    <span class="font-semibold"> trust and work ethic. </span> <span class="font-semibold underline">Your privacy is a non-negotiable for us.</span> For this reason, we hand-pick five of the greatest content creators
+        from among the applicants each month, and following the interview, we establish up a partnership.
+        With the Model Accelerator Program, your OnlyFans reach their full potential in the shortest time
+        humanly possible. Here&apos;s what you&apos;ll receieve inside this accelerator program:
+        <br />
+        <br />
+
+
+
+      </p>
+
+      <br />
+      <span class="font-semibold">
+        Now, you know that it&apos;s possible to have it all, without sacrificing it all. If that sounds like a worth goal, then I&apos;d 
+        like to invite you to join us and <span class="underline cursor-pointer">  <a>apply today!</a></span>
+      </span>
+      <br />
+      <br />
+    </div>
+
+
+  </div>
+</div>
+
+
+  <span class="text-white font-semibold text-2xl px-6 ">What We&apos;ve Done For Our Models</span>
+  <ul class="flex flex-col md:flex-row w-full gap-y-8 md:gap-x-8 pt-4   pb-12 px-6 max-w-7xl ">
+    {
+      features.map(({ title, description }) => (
+        // <li class="flex flex-col items-center gap-4 p-6 border border-default bg-offset">
+        //   <p class="text-4xl font-extrabold text-center text-red-500">{title}</p>
+        //   <p class="text-sm text-center text-offset">{description}</p>
+        // </li>
+
+        <div class="flex flex-col justify-center items-center p-4 duration-500  shadow-xl motion-safe:hover:scale-105 w-full
+    
+    bg-gradient bg-gradient-to-br from-gray-500 to-transparent
+        bg-opacity-20 h-full py-20 rounded-md  backdrop-blur-sm
+    text-center
+
+    ">
+
+
+      <h5 class="    text-6xl leading-10
+                  lg:6xl font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-blue-500">{title}
+
+        <p class="text-xl font-semibold">{description}</p>
+      </h5>
+
+
+    </div>
+      ))
+    }
+  </ul>
+</section>

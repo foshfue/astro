@@ -7,11 +7,11 @@ import HeroImage from "~/components/hero-image.astro";
 const widths = [450, 800];
 const sizes = "(min-width: 640px) 42vw, 67vw";
 
-const { webp, avif, png } = generateImage("src/assets/astronaut.png", {
+const { webp, avif, png } = generateImage("src/assets/stting.png", {
   widths,
   formats: ["webp", "avif", "png"],
-  outputDir: "public/assets/images/astronaut",
-  urlPath: "/assets/images/astronaut",
+  outputDir: "public/assets/images/stting",
+  urlPath: "/assets/images/stting",
 });
 
 const avifSrcset = avif.map(({ srcset }) => srcset).join(",");
@@ -19,39 +19,67 @@ const webpSrcset = webp.map(({ srcset }) => srcset).join(",");
 const pngSrcset = png.map(({ srcset }) => srcset).join(",");
 ---
 
-<section class="relative h-full bg-black">
+<section class="relative h-full bg-black flex items-center justify-center">
   <Starfield />
-  <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
-    <HeroImage />
-  </div>
-  <div class="relative grid h-full sm:grid-cols-2 place-items-center">
-    <h2
-      class="flex flex-col self-end gap-2 sm:gap-4 sm:self-auto sm:justify-self-end"
-    >
-      <Icon name="logomark" class="h-24 text-white md:h-32" />
-      <div
+  <div class="relative flex h-full place-items-center p-6 flex-col md:flex-row  max-w-7xl ">
+   
+      <!-- <Icon name="logomark" class="h-24 text-white md:h-32" /> -->
+      <!-- <div
         class="font-extrabold tracking-tighter text-center text-8xl gradient-text"
       >
         Build fast
         <br /> websites,
         <br /> faster.
+      </div> -->
+      <div class="flex flex-col gap-y-5 items-start w-full">
+
+        <h1 class="font-bold text-4xl  sm:text-7xl 
+         text-white lg:text-7xl ">
+          WE HELP <span class="text-blue-400">ONLYFANS </span><span class="text-green-400">
+            CONTENT CREATORS </span> TO <span class="text-yellow-400">START & SCALE</span>
+            THEIR BUSINESSES TO  <span class=" text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-500">
+              FIERCELY PROFITABLE</span> LEVELS
+        </h1>
+        <p class="text-[18px] leading-8 xl:pr-56 lg:text-[20px] text-[#d0d0d0] ">
+          We&apos;re looking to invest in five great models per month.
+          <br />
+          Will it be you?
+        </p>
+        <!-- flex flex-col justify-center items-center p-4 duration-500  shadow-xl motion-safe:hover:scale-105 w-full
+    
+        bg-gradient bg-gradient-to-br from-gray-500 to-transparent
+            bg-opacity-20 h-full py-20 rounded-md  backdrop-blur-sm
+        text-center
+     -->
+          <a class="flex flex-col text-white justify-center items-center p-4 duration-500  shadow-xl motion-safe:hover:scale-105
+          bg-gradient-to-r from-purple-400 to-pink-500
+          bg-gradient
+             py-2 px-8 rounded-md  backdrop-blur-sm
+          text-center" href="#form">
+        
+            <span class="text-md font-medium  ">
+              Apply NOW!
+            </span>
+          </a>
+   
       </div>
-    </h2>
+
     <picture
-      class="self-start w-2/3 max-w-3xl sm:w-10/12 sm:self-auto sm:justify-self-start"
+      class="w-full md:w-full h-full max-w-sm  flex items-center justify-centerduration-500  motion-safe:hover:scale-105"
     >
       <source type="image/avif" srcset={avifSrcset} {sizes} />
       <source type="image/webp" srcset={webpSrcset} {sizes} />
       <source type="image/png" srcset={pngSrcset} {sizes} />
       <img
-        class="object-cover w-full h-full"
+        class="object-contain w-full h-full"
         src={png[0].url}
         width={png[0].width}
         height={png[0].height}
         alt="A floating astronaut in a space suit"
       />
     </picture>
-  </div>
+
+</div>
 </section>
 
 <noscript>

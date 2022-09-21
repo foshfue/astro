@@ -1,0 +1,80 @@
+---
+import { generateImage } from "astro-eleventy-img";
+import { Icon } from "astro-icon";
+
+const widths = [450, 800];
+const sizes = "(min-width: 640px) 42vw, 67vw";
+
+const { webp, avif, png } = generateImage("src/assets/bg-4.png", {
+  widths,
+  formats: ["webp", "avif", "png"],
+  outputDir: "public/assets/images/bg-4.png",
+  urlPath: "/assets/images/bg-4.png",
+});
+
+const avifSrcset = avif.map(({ srcset }) => srcset).join(",");
+const webpSrcset = webp.map(({ srcset }) => srcset).join(",");
+const pngSrcset = png.map(({ srcset }) => srcset).join(",");
+---
+
+
+<section class="flex flex-col items-center scroll-mt-24 relative  ">
+
+  <div class=" bg-gray-50 w-full flex items-center justify-center"
+
+  style={{
+    backgroundImage: `url(${pngSrcset.src})`,
+
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "fill",
+
+    // backgroundPosition: "110% center",
+    // paddingTop: "20px"
+
+  }}
+
+>
+  <div class="px-6 max-w-7xl  pt-10 pb-10">
+    <h3 class="  text-6xl font-extrabold  w-fit"><span class="underline underline-offset-2 decoration-blue-600">Together</span>
+      <br class="block " />
+
+      {" "}  We Can Do <span class="underline underline-offset-2 decoration-blue-600">
+        Anything</span>…
+
+      <br />
+      But You Can’t Do <span class="underline underline-offset-2 decoration-red-600">Everything</span>
+    </h3>
+    <br />
+    <p class="text-justify">
+      <span class="font-semibold"></span>
+      The only way to achieve your goals   <span class="font-semibold">without giving up your entire life</span>, nights out, dream vacations,
+      health, or sanity is through installing systems and team that let your business
+      <span class="font-semibold"> run
+        and
+
+        scale
+        without you working 24 hours a day.</span>
+      <br />
+      <br />
+      Or you may       <span class="font-semibold">spend countless hours</span> researching how Onlyfans&apos;     <span class="font-semibold">marketing, message, branding, management, hiring, and many other secret formulae work while dealing with crushing failures, restless nights, and self-doubt.</span>
+      <br />
+      <br />
+
+      Luckily, to achieve  <span class="font-semibold">world-class quality</span> work and save you more than 30-40 hours a day (yes, a day is 24 hours), our proprietary technology and world-class specialists     <span class="font-semibold">transform our models into world-class content creators</span> in Onlyfans!  We&apos;ve done it more than 40 times now, and we now have battle-proven techniques and strategies.
+      We are looking for models and content creators to partner with in order to scale them up to %1 of Onlyfans Content Creators who have a strong work ethic and high passion.
+      <br />
+      <br />
+      <span class="font-semibold ">  If you believe you are one of them,
+        <span class="underline cursor-pointer"> 
+          Apply now!
+        </span>
+        </span>
+
+
+    </p>
+  </div>
+</div>
+
+
+</section>
+

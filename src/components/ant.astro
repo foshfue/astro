@@ -1,0 +1,29 @@
+---
+import BlackNoise from "./../assets/BlackNoiseF.gif"
+---
+
+<section class="flex flex-col items-center gap-4 space-y-8 scroll-mt-24 relative">
+<div
+class="absolute inset-0 w-screen "
+style={{
+  backgroundImage: `url(${BlackNoise.src})`,
+  backgroundSize: "100px 100px",
+  backgroundRepeat: "repeat",
+
+}}></div>
+
+  <div class="flex flex-col items-center gap-4 z-10 px-6 max-w-7xl ">
+    <slot name="eyebrow" />
+    <h2
+      class="text-5xl md:text-6xl font-extrabold  text-left text-white"
+    >
+    YOU KNOW IT, WE KNOW IT. ONLYFANS BUILDING AIN’T EASY.
+    WE’RE THE PERFORMANCE <span class=" underline underline-offset-2 decoration-blue-600 ">  GROWTH TEAM</span> RALLYING BEHIND ONLYFANS' MOST <span class=" underline underline-offset-2 decoration-blue-600 ">  PASSIONATE</span> CONTENT CREATORS.
+    </h2>
+  </div>
+  <slot />
+  <p class="max-w-xl text-2xl font-extrabold text-center">
+    <slot name="lead" />
+  </p>
+
+</section>
